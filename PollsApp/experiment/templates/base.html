@@ -1,0 +1,7 @@
+{%if user.is_authenticated%}
+	<h1>Hello {{user.first_name}} {{user.last_name}}</h1>
+	<a href="{%url 'users'%}">Users</a>
+{%else%}
+	<h1><strong>You are not authenticated</strong></h1>
+	 <a href="{%url 'login'%}">Login</a>
+{%endif%}

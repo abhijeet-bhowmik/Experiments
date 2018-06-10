@@ -1,0 +1,12 @@
+{%if user.is_authenticated%}
+		<h1>Hello {{user.username}}</h1>
+		<ul>
+			{%for user in users%}
+ 				<li>{{user.username}}</li>
+			{%endfor%}
+		</ul>
+		<a href = "{%url 'logout'%}"><button>Logout</button></a>
+{%else%}
+	 <h2>You are not authenticated</h2>
+	 <a href="{%url 'login'%}">Login</a>
+{%endif%}

@@ -1,0 +1,12 @@
+{%if message%}
+	<h4>Registration Successful</h4>
+{%endif%}
+<div>
+<h1>Please Login</h1>
+<form method="post">
+	{%csrf_token%}
+	{{form.as_p}}
+	<button type="submit">Login</button>
+</form>
+<a href = "{%url 'register'%}">Register</a>
+</div>
